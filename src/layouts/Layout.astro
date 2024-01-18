@@ -3,6 +3,7 @@ interface Props {
 	title: string;
 }
 import { SEO } from "astro-seo";
+import '@fontsource-variable/inter';
 
 const { title } = Astro.props;
 import Header from '../components/Header.astro'
@@ -38,6 +39,15 @@ import Header from '../components/Header.astro'
         ],
       }}
     />
+		<!-- Google tag (gtag.js) -->
+		<script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-KKDT4PVR80"></script>
+		<script type="text/partytown">
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-KKDT4PVR80');
+		</script>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -64,7 +74,7 @@ import Header from '../components/Header.astro'
 		);
 	}
 	html {
-		font-family: system-ui, sans-serif;
+		font-family: 'Inter Variable', system-ui, sans-serif;
 		background-size: 224px;
 	}
 	code {
